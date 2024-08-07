@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "yeslee.me",
-      port: "8089",
+      port: "8077",
       instances: "max",
       exec_mode: "cluster",
       cwd: "./",

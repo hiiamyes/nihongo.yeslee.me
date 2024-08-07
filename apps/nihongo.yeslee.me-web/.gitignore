@@ -43,3 +43,6 @@ next-env.d.ts
 # Sentry Config File
 .sentryclirc
 sentry.*
+
+scripts/pull-web.sh
+scripts/push-web.sh
