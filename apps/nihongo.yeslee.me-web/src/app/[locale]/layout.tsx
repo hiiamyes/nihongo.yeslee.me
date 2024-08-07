@@ -1,6 +1,5 @@
 import NextUIProvider from '@/src/libs/nextui/NextUIProvider';
 import { GoogleTagManager } from '@next/third-parties/google';
-import 'leaflet/dist/leaflet.css';
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
 

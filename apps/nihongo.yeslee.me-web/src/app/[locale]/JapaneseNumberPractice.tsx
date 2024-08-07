@@ -55,9 +55,7 @@ const JapaneseNumberPractice = (props: Props) => {
 
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
-      if (event.key === 'g') {
-        getRandomNumber();
-      } else if (event.key === 'r') {
+      if (event.key === 'r') {
         replayNumber();
       } else if (event.key === 'Enter') {
         checkAnswer();
@@ -69,25 +67,16 @@ const JapaneseNumberPractice = (props: Props) => {
     };
   }, [replayNumber, checkAnswer]);
 
-  const getRandomNumber = () => {
-    const randomNum = Math.floor(Math.random() * 100) + 1;
-    number.current = randomNum;
-    setUserAnswer('');
-    speakNumber(randomNum);
-  };
-
   const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setUserAnswer(e.target.value);
   };
 
   return (
-    <div className="grid justify-center gap-2 p-4">
+    <div className="m-auto grid w-full max-w-lg gap-2 p-2">
       <h1 className="text-center text-3xl">{locale === 'en' ? 'Japanese Number Practice' : '日文數字聽力練習'}</h1>
-
-      {/* <button onClick={getRandomNumber}>Generate Random Number (g)</button> */}
       <div className="flex items-center gap-2">
         <input
-          className="rounded border border-black p-2 text-center"
+          className="w-0 flex-1 rounded border border-black p-2 text-center"
           type="number"
           value={min}
           onChange={(e) => {
@@ -95,9 +84,9 @@ const JapaneseNumberPractice = (props: Props) => {
           }}
           placeholder={locale === 'en' ? 'Min' : '最小'}
         />
-        <span>~</span>
+        <div>~</div>
         <input
-          className="rounded border border-black p-2 text-center"
+          className="w-0 flex-1 rounded border border-black p-2 text-center"
           type="number"
           value={max}
           onChange={(e) => setMax(+e.target.value)}
@@ -113,11 +102,11 @@ const JapaneseNumberPractice = (props: Props) => {
         placeholder={locale === 'en' ? 'Enter the number' : '輸入數字'}
       />
       <div className="flex justify-center gap-2">
-        <button className="flex-1" onClick={checkAnswer}>
-          {locale === 'en' ? 'Submit (enter)' : '確認（Enter）'}
-        </button>
         <button className="flex-1" onClick={replayNumber}>
           {locale === 'en' ? 'Replay (r)' : '重播（R）'}
+        </button>
+        <button className="flex-1" onClick={checkAnswer}>
+          {locale === 'en' ? 'Submit (enter)' : '確認（Enter）'}
         </button>
       </div>
       {correct && <div className="text-center text-2xl text-green-500">{correct}</div>}

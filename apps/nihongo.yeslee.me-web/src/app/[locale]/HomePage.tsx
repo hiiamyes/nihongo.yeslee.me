@@ -26,7 +26,7 @@ const HomePage = (props: Props) => {
         ];
 
   return (
-    <div className="p-4">
+    <div className="grid p-4">
       <header className="flex justify-center gap-2">
         {laguageSelectOptions.map((option) => {
           return (
