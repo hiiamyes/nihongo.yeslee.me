@@ -46,7 +46,7 @@ const HomePage = (props: Props) => {
         <a className="underline" href="https://yeslee.me" target="_blank" rel="noopener noreferrer">
           Yes Lee
         </a>
-        <a href="https://github.com/hiiamyes/higongo.yeslee.me" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/hiiamyes/nihongo.yeslee.me" target="_blank" rel="noopener noreferrer">
           <img
             className="h-5"
             src="https://res.cloudinary.com/dsxispofm/image/upload/f_auto,q_auto,h_64/v1713779246/icons/github_eokz2j.svg"
