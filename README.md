@@ -1,3 +1,3 @@
-# Nihongo x Software Engineering
+# Nihongo x Software
 
 https://nihongo.yeslee.me

@@ -1,0 +1,3 @@
+cd apps/nihongo.yeslee.me
+pnpm lint
+pnpm test
